@@ -1,0 +1,27 @@
+import React, { useMemo } from 'react';
+import LocalI from "./Fotos/sushi-local.jpg"
+import Mapa from "./Fotos/mapa-local.png"
+import { Button } from 'reactstrap';
+
+export const Local = () => {
+    return (
+        <div className="" id="local">
+            <div className="col-md-6">
+                <img src={LocalI}
+                    className="card-img" id="img-Local"/>
+            </div>
+
+            <div className="" id="imge2">
+                <h3 id="tit-local"> Encuentranos en la siguiente ubicación</h3>
+                <Button variant="outlined" color="primary" href="https://www.google.com/maps/dir/-33.4577548,-70.6573692/Av.+Los+Pajaritos+564,+Maip%C3%BA,+Regi%C3%B3n+Metropolitana/@-33.4937673,-70.7761022,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x9662dcdbc10314a5:0x2675813b656a3108!2m2!1d-70.7571816!2d-33.5216098">Como Llegar</Button>
+                <ul className="col-md-10">
+                    <li className="list-group-item"></li>
+                    <img src={Mapa}
+                        className="card-img" id="img-Mapa" />
+                </ul>
+                
+            </div>
+
+        </div>
+    )
+}

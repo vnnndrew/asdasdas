@@ -1,0 +1,734 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+}
+
+.App{
+    max-width: auto;
+    width: 100%;
+    min-height: 110vh;
+    margin: 0 auto;
+    box-shadow: 0 5px 6px rgb(165, 118, 118);
+    padding: 0 15px;
+    box-sizing: border-box;
+    background-color: black;
+    
+}
+
+header{
+    width: 92%;
+    min-height: auto;
+    max-width: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background: linear-gradient( rgba(11,9,9,1) 0%, rgba(250,1,1,1) 100%);
+    box-shadow: 0 5px 10px #000000;
+    position: fixed; z-index: 10; float: left;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 23px;
+}
+
+a:hover{
+    color: #ff0000;
+}
+
+li{
+    list-style: none;
+}
+
+li:hover .colorhover{
+    color: #f09e9e;
+}
+
+header ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+header ul li {
+    padding: 0 1rem;
+}
+
+header ul li a{
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    
+}
+
+header .cart {
+    position: relative;
+    cursor: pointer;
+}header .cart box-icon{
+    width: 35px;
+    height: 35px;
+}
+
+header .cart span{
+    position: absolute;
+    top:  -1rem;
+    right: -1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    padding:  0rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: crimson;
+}
+
+
+
+button{
+    border: none;
+    border-radius: 3px;
+    padding: 5px 12px;
+    cursor: pointer;
+    font: bold;
+    font-size: 16px;
+    color: #000000;
+
+    gap: 1rem 2rem;
+    
+}
+button:hover {
+    background-color: #f16a6a;
+    color: #1a202c;
+}
+
+/*----------------Productos------------------*/
+
+.titulo{
+    font-size: 3rem;
+    padding: 10rem 0 0 0;
+    padding-top: 14rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    font: bold;
+}
+
+.productos{
+    padding: 5rem 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem,1fr)); /* autofilea la posisicion adecuadad de cada imagen */
+    gap: 5rem 5rem;
+    box-sizing:border-box;
+}
+
+.producto{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 10px 10px 2px rgba(255, 0, 0, 0.274);
+    border-radius: 5px;
+    height: 100%;
+}
+
+.producto:hover{
+    border: 6px solid #ff0000; /*Cuando se pasa el ratón por encima de producto*/
+}
+
+.producto_img img{
+    width: 310px;
+}
+
+
+
+.productoDescripcion{
+    padding: 1rem;
+}
+
+.productoDescripcion h1{
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.productoDescripcion p{
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    font-size: 16.5px;
+    font-family: 'Josefin Slab', serif;
+}
+
+.productoDescripcion .precio{
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.producto .botonAgregar{
+    width: 100%;
+    height: 45px;
+    display: grid;
+    justify-content: center;
+    gap: 1rem 2rem;
+    margin: 1rem;
+}
+
+.botonAgregar .btn {
+    border: none;
+    outline: 0; /*quitar borde negro*/
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.botonAgregar button{
+    background-color:rgb(255, 0, 0);
+    max-width: 250px;
+    width: 100%;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+
+}
+
+.botonAgregar div{
+    background-color: #ffffff;
+    color: #000000;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    margin-left: -2rem;
+    border-radius: 5px;
+}
+
+.botonAgregar div a{
+    background-color: #ffffff;
+    color: rgb(255, 0, 0);
+    font-weight: 700;
+    text-align: center;
+}
+
+.botonAgregar:hover{
+    color: #ff0000;
+}
+
+.botonAgregar div a:hover{
+    color: rgb(0, 0, 0);
+}
+
+
+/*------------------------INICIO------------------------*/
+
+
+.Inicio{
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 11rem; /*Posicionar debajo del header*/
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+}
+.Inicio h1{
+
+    color: rgb(255, 255, 255);
+}
+.Inicio img{
+    width: 100%;
+}
+/*titulo Promocion*/
+
+.tituloPromo {
+    font-size: 3rem;
+    padding: 10rem 0 0 0;
+    padding-top: 10rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    font: bold;
+    
+}
+
+.productosPromo{
+    padding: 5rem 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50rem,1fr)); /* autofilea la posisicion adecuadad de cada imagen */
+    gap: 5rem 5rem;
+    box-sizing: border-box;
+    color: #000000;
+}
+
+/*--------------Botones de PROMO del inicio-----------*/
+
+.productoPromo{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 10px 10px 2px rgba(255, 0, 0, 0.274);
+    border-radius: 5px;
+}
+
+.productoPromo .botonPromo{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 1rem 2rem;
+    margin: 1rem;
+}
+
+.botonPromo .btnPromo {
+    border: none;
+    outline: 0; /*quitar borde negro*/
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.botonPromo button{
+    background-color:rgb(255, 0, 0);
+    max-width: 250px;
+    width: 100%;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+
+}
+
+.botonPromo div{
+    background-color: #ff0000;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    margin-left: -2rem;
+    border-radius: 5px;
+}
+
+.botonPromo div a{
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    text-align: center;
+}
+
+.botonPromo:hover{
+    color: #ff0000;
+}
+
+.botonPromo div a:hover{
+    color: rgb(0, 0, 0);
+}
+
+
+.productoDescripcionPromo{
+    padding: 1rem;
+}
+
+.productoDescripcionPromo h1{
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+}
+
+.productoDescripcionPromo p{
+    font-weight: 700;
+    color: rgba(255, 0, 0, 0.555);
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.productoDescripcionPromo .precioPromo{
+    font-size: 1.5rem;
+    color: rgb(255, 0, 0);
+    text-align: center;
+}
+/*-----------------------------------------------------*/
+
+/*Carrusel*/
+
+.Carrusel{
+    position: relative; z-index: 5; /*Para pasar por debajo del Header*/
+}
+
+.carruselMenu{
+    padding-top: 11rem;
+}
+
+
+/*------------------CARRITO--------------------------------*/
+
+.carritos{
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 300ms ease-in-out;
+    z-index: 2;
+    padding-bottom: 5rem;
+    visibility: hidden;
+
+    position: fixed; z-index: 15; float: left;
+    
+}
+
+.carrito{
+    position: fixed;
+    top: 50%;
+    right: -17.5%;
+    transform: translate(50%, -50%) scale(1); /*Para que aparezca de izquierda a derecha*/
+    width: 40%;
+    height: 91%;
+    overflow-x: scroll;
+    transition: all 400ms ease-in-out;
+    background-color: #f3d6d6;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.carrito h2{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.carritos.show{
+    visibility: visible;
+}
+
+.carrito.show{
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+    visibility: visible;
+    
+}
+
+.carrito_close box-icon{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transform: all 300ms ease-in-out;
+    margin: 3rem 0 0 2rem;
+}
+
+.carrito_close box-icon:hover{
+    fill: rgb(255, 0, 0);
+}
+
+.carrito_center{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.carrito_item{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    width: 80%;
+    margin: 2rem auto;
+    box-shadow: 0 1px 10px rgb(255, 0, 0);
+    border-radius: 5px;
+}
+
+.carrito_item img{
+    width: 9rem;
+}
+
+.carrito_item h3{
+    margin-top: 1.5rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    font-family:Helvetica, sans-serif;
+}
+
+.carrito_item.precio{
+    color: #ff0000;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-left: -1rem;
+
+}
+
+.carrito_item box-icon{
+    fill: #ff0000;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: .3rem;
+}
+
+.carrito_item .cantidad{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.carrito_item .borrarProducto box-icon{
+    width: 60px;
+    height: 80px;
+    fill: black;
+    margin-top: 2rem;
+    position: static;
+}
+
+.carrito_total{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.carrito_total h3{
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.carrito_total .btn{
+    display: inline-block;
+    padding: .3rem 1rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #ff0000;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.carrito_total .btn:hover{
+    background-color: #0a0a0a;
+    color: rgb(255, 255, 255);
+}
+
+
+
+/*------------------------PREGUNTAS FRECUENTES--------------------------*/
+
+.Acordeon{
+    height: 3rem;
+    padding-top: 20rem;
+    padding-bottom: 48em; /*Tiene que ser mayor al del footer para poder dejar el footer abajo y que no tape el body*/
+    place-items: center;
+    display: block;
+    position: relative;
+}
+
+.Acordeon h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+
+.Descripcion{
+    color: rgb(0, 0, 0);
+    background: #ffc8c8;
+    font-size: 1.5rem;
+}
+
+.cajaAcordeon{
+    /*text-align: center;*/
+    align-items: center;
+    margin: 1rem;
+    box-shadow: 0 5px 10px #ff0000;
+}
+
+
+/*----------------------------FOOTER------------------------------*/
+
+.footer{
+    color: white;
+    font-size: 15px;
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    background: linear-gradient(0deg, rgba(11,9,9,1) 0%, rgba(250,1,1,1) 100%);
+    box-shadow: 0 5px 10px #961010;
+    position: absolute;
+    padding: 1em 0;
+    padding-top: 2rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+    
+}
+
+.linksFooter a{
+    color: white;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+/*----------------------------MEDIA------------------------------*/
+
+@media only screen and (max-width: 600px){
+    header ul{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .carrito_item{
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+    }
+    .carrito_item h3{
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .carrito_item{
+        width: 92%;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .carrito_item h3{
+        display: none;
+    }
+    .carrito_item .borrarProducto box-icon{  /*A partir de los 450px disminuye el tamaño */
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/*---------------------Login------------------------*/
+
+#CajaLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#tit-mod{
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    text-align: center;
+}
+
+
+
+/*_______________Locales___________________________*/
+
+#locales{
+    padding-top: 14rem;
+    padding-bottom: 5rem;
+}
+
+#grupo-mapa{
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    padding-top:10px;
+    padding-bottom:10px;
+    width: 600px;
+    background: hsl(0, 58%, 27%);
+    
+}
+
+#tit-mapa{
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    color: white;
+}
+
+#tit-local{
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    color: rgb(179, 32, 32);
+    font-size: 54px;
+}
+
+#cajas-img{
+    background: black;
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    color: white;
+    
+}
+
+#img-local{
+    background: hsla(0, 74%, 21%, 0.747);
+}
+
+#bt-llegar{
+    display: flexbox;
+	padding: 5px 15px;
+	border-radius: 100px;
+	border: none;
+	cursor: pointer;
+	transition: .3s ease all;
+    background-color: rgb(100, 11, 11);
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+#bt-llegar:hover{
+    background: rgb(204, 86, 86);
+    text-decoration: none;
+}
+/*_______________register___________________________*/
+#tit-reg{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    font: bold;
+}
+
+#bt-reg{
+    background-color:rgb(100, 11, 11);
+    text-decoration: none;
+}
+
+#ModalRegister{
+    background-color:rgb(0, 0, 0);
+}
+
+#link-css{
+    text-decoration: none;
+}
+
+/*________iconos___________*/
+
+.carrito_close{
+    color:rgb(0, 0, 0);
+    padding-left: 2rem;
+    padding-top: 2rem;
+    
+}
+
+#agregarProd{
+    padding-top: 1rem;
+}
+
+.borrarProducto{
+    padding-top: 1rem;
+}
+
+#inicioPag{
+    box-sizing: content-box;
+}
+
+.container-fluid{
+    padding: 5rem 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem,1fr)); /* autofilea la posisicion adecuadad de cada imagen */
+    gap: 5rem 5rem;
+    box-sizing:border-box;
+}

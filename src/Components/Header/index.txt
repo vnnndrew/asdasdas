@@ -1,0 +1,49 @@
+import React, { useContext } from "react";
+import logo_fuko from "../../Images/logo_fuko.png";
+import { Link } from 'react-router-dom'; //para conectar las paginas
+import { DataContext } from "../../Context/Dataprovider";
+
+export const Header = () => {
+    const value = useContext(DataContext)
+    const [menu, setMenu] = value.menu;
+    const [carrito] = value.carrito;
+
+    const toogleMenu = () => {
+        setMenu(!menu)
+    }
+    return (
+        <header>
+            {/*<Link to="/">*/}
+                <div className="logo">
+                    {<img src={logo_fuko} alt="logo" width="150" />}
+                </div>
+            {/*</Link>*/}
+            <div>
+                <ul>
+                    <div></div>
+                    <li>
+                        <Link to="/" className="colorhover"  http-equiv="refresh">INICIO</Link>
+                    </li>
+                    <li>
+                        <Link to="/menu" className="colorhover" http-equiv="refresh" >MENÚ</Link>
+                    </li>
+                    <li>
+                        <Link to="/locales" className="colorhover">LOCALES</Link>
+                    </li>
+                    <li>
+                        <Link to="/preguntas" className="colorhover">PREGUNTAS FRECUENTES</Link>
+                    </li>
+                    <li>
+                        <button className="user"> <box-icon type='solid' name='user'></box-icon>INGRESAR</button>
+                    </li>
+
+                </ul>
+            </div>
+            <div className="cart" onClick={toogleMenu}>
+                <box-icon type='solid' name='cart' color="white"></box-icon>
+                <span className="item__total">{carrito.length}</span>
+
+            </div>
+        </header >
+    )
+}
